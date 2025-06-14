@@ -1,2 +1,2 @@
-damage
-no damage
+Organik
+Anorganik
