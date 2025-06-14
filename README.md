@@ -51,7 +51,6 @@ CAPSTONEFINAL/
 ### Machine Learning
 - TensorFlow
 - Python
-- OpenCV
 - Jupyter Notebook
 
 ---
