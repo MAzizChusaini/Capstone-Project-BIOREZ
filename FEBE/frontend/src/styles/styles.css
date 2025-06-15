@@ -630,27 +630,47 @@ footer {
 }
 
 /* SCANNER */
-.new-form__camera__video {
-  width: 100%;
-  background-color: rgb(166, 154, 154);
-  border-radius: 10px;
-  border: 4px solid var(--main-color);
-  display: block;
+.camera-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 
-  background-image: url('../../../../public/images/placeholderScannerPageImages.png');
-  background-size: cover;
-  background-position: center;
+.new-form__camera__video {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    background-color: rgb(166, 154, 154);
+    border-radius: 10px;
+    border: 4px solid var(--main-color);
+    display: block;
+    background-image: url('../../../../public/images/placeholderScannerPageImages.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .new-form__camera__canvas {
-  display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+
+.new-form__camera__container {
+    position: relative;
+    width: 100%;
 }
 
 .new-form__camera__tools {
-  margin-top: 5px;
-  flex-direction: column;
-
-  display: none;
+    margin-top: 15px;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    align-items: center;
 }
 
 input,
@@ -694,12 +714,16 @@ select {
   line-height: 1rem;
 
   box-shadow: 0 1px 0 1px var(--main-color);
+  width: auto;
+  max-width: 100%;
+  margin-bottom: 10px;
 }
 
 .camera-btn-container {
   margin-top: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  width: 100%;
 }
 
 .camera-btn-container button {
@@ -709,6 +733,8 @@ select {
 .documentations-buttons-container {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .camera-take-button-container {
