@@ -58,6 +58,9 @@ CAPSTONEFINAL/
 ## 📦 Instalasi
 ```
 pip install -r requirements.txt
+npm install
+npm install onnxruntime-web
+npm run start
 ```
 ---
 ## 📁 Dataset
