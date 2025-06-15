@@ -40,6 +40,7 @@ CAPSTONEFINAL/
 │ └── notebook/
 ├── public/
 ├── README.md
+└── requirements.txt
 ```
 ---
 ## 🛠️ Teknologi yang Digunakan
