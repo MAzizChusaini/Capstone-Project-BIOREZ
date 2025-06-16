@@ -11,6 +11,7 @@ import Database from '../../database';
 export default class ShopPage {
   #presenter = null;
   activeFilter = null;
+  _saveButtonListenerAdded = false;
 
   async render() {
     return `
@@ -80,6 +81,8 @@ export default class ShopPage {
         this.#presenter.filterItems(searchTerm, this.activeFilter);
       });
     });
+
+    this.renderSaveButton();
   }
 
   populateShopItemsList(message, items) {
@@ -91,12 +94,15 @@ export default class ShopPage {
       <div class="shop-list">${html}</div>
     `;
 
-    this.renderSaveButton();
     this.updateAllCartButtonsState();
   }
 
   renderSaveButton() {
     const shopList = document.getElementById('shop-list');
+
+    // ✅ Cegah listener ganda
+    if (this._saveButtonListenerAdded) return;
+    this._saveButtonListenerAdded = true;
 
     shopList.addEventListener('click', async (event) => {
       const cartButton = event.target.closest('.shop-item__cart-button');
