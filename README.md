@@ -49,6 +49,11 @@ CAPSTONEFINAL/
 - Webpack
 - HTML, CSS
 
+### Backend
+- Node.js
+- Hapi.js
+- Postman
+
 ### Machine Learning
 - TensorFlow
 - Python
