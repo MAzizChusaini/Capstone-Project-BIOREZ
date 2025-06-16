@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   list-style: none;
   text-decoration: none;
   scroll-behavior: smooth;
@@ -51,7 +51,7 @@
 }
 
 .loader::after {
-  content: '';
+  content: "";
   display: inline-block;
   box-sizing: border-box;
   width: 50px;
@@ -97,7 +97,7 @@ section {
 }
 
 .green-button:hover {
-  transform: scale(.9);
+  transform: scale(0.9);
 }
 
 .white-button {
@@ -471,12 +471,12 @@ main {
   border-end-start-radius: 10px;
   border-end-end-radius: 10px;
 
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .shop-item__cart-button:hover {
-    /* box-shadow: var(--hover-color) 0px 1px 25px; */
-    font-size: 15px;
+  /* box-shadow: var(--hover-color) 0px 1px 25px; */
+  font-size: 15px;
 }
 
 .shop-item__cart-button:disabled {
@@ -507,7 +507,7 @@ main {
 }
 
 .shop-item__button a:hover {
-  transform: scale(.98);
+  transform: scale(0.98);
 }
 
 /* FOOTER */
@@ -630,47 +630,39 @@ footer {
 }
 
 /* SCANNER */
-.camera-section-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.new-form__camera__video {
-    width: 100%;
-    height: auto;
-    max-height: 600px;
-    background-color: rgb(166, 154, 154);
-    border-radius: 10px;
-    border: 4px solid var(--main-color);
-    display: block;
-    background-image: url('../../../../public/images/placeholderScannerPageImages.png');
-    background-size: cover;
-    background-position: center;
-}
-
-.new-form__camera__canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
+/* .camera-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .new-form__camera__container {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
+} */
+
+.new-form__camera__video {
+  width: 100%;
+  background-color: rgb(166, 154, 154);
+  border-radius: 10px;
+  border: 4px solid var(--main-color);
+  display: block;
+
+  background-image: url('../../../../public/images/placeholderScannerPageImages.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.new-form__camera__canvas {
+  display: none;
 }
 
 .new-form__camera__tools {
-    margin-top: 15px;
-    flex-direction: column;
-    display: flex;
-    width: 100%;
-    align-items: center;
+  margin-top: 5px;
+  flex-direction: column;
+
+  display: none;
 }
 
 input,
@@ -714,16 +706,12 @@ select {
   line-height: 1rem;
 
   box-shadow: 0 1px 0 1px var(--main-color);
-  width: auto;
-  max-width: 100%;
-  margin-bottom: 10px;
 }
 
 .camera-btn-container {
   margin-top: 20px;
   display: flex;
-  justify-content: center;
-  width: 100%;
+  justify-content: space-between;
 }
 
 .camera-btn-container button {
@@ -733,8 +721,6 @@ select {
 .documentations-buttons-container {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .camera-take-button-container {
@@ -832,11 +818,11 @@ select {
   font-size: var(--p-font);
   font-weight: 400;
   cursor: pointer;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .scanner-delete-btn:hover {
-  transform: scale(.98);
+  transform: scale(0.98);
 }
 
 /* CART */
@@ -976,7 +962,7 @@ select {
 }
 
 .cart-details__button:hover {
-  transform: scale(.98);
+  transform: scale(0.98);
 }
 
 /* BIOPORI */
@@ -1108,5 +1094,5 @@ select {
 }
 
 .order-now-button:hover {
-  transform: scale(.98);
+  transform: scale(0.98);
 }
