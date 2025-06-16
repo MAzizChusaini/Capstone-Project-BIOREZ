@@ -11,7 +11,7 @@ import Database from '../../database';
 export default class ShopPage {
   #presenter = null;
   activeFilter = null;
-  _saveButtonListenerAdded = false; // ✅ Tambahkan flag
+  _saveButtonListenerAdded = false;
 
   async render() {
     return `
@@ -82,7 +82,7 @@ export default class ShopPage {
       });
     });
 
-    this.renderSaveButton(); // ✅ Pindahkan ke sini dan pastikan hanya dipanggil sekali
+    this.renderSaveButton();
   }
 
   populateShopItemsList(message, items) {
