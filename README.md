@@ -107,7 +107,7 @@ Mahasiswa Universitas Indraprasta PGRI, fokus di bidang Data Science dengan spes
 ### Muhammad Fadhli Al Hafizh
 Mahasiswa Universitas Indraprasta PGRI, fokus di bidang Front-End & Back-End Developer
 
-🔗 [GitHub](https://github.com/Fadhli2803)
+🔗 [GitHub](https://github.com/MFadhliAlHafizh)
 
 🔗 [LinkedIn](https://www.linkedin.com/in/mfadhlialhafizh)
 
