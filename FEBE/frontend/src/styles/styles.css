@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   list-style: none;
   text-decoration: none;
   scroll-behavior: smooth;
@@ -51,7 +51,7 @@
 }
 
 .loader::after {
-  content: '';
+  content: "";
   display: inline-block;
   box-sizing: border-box;
   width: 50px;
@@ -97,7 +97,7 @@ section {
 }
 
 .green-button:hover {
-  transform: scale(.9);
+  transform: scale(0.9);
 }
 
 .white-button {
@@ -480,12 +480,12 @@ main {
   border-end-start-radius: 10px;
   border-end-end-radius: 10px;
 
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .shop-item__cart-button:hover {
-    /* box-shadow: var(--hover-color) 0px 1px 25px; */
-    font-size: 15px;
+  /* box-shadow: var(--hover-color) 0px 1px 25px; */
+  font-size: 15px;
 }
 
 .shop-item__cart-button:disabled {
@@ -516,7 +516,7 @@ main {
 }
 
 .shop-item__button a:hover {
-  transform: scale(.98);
+  transform: scale(0.98);
 }
 
 /* FOOTER */
@@ -640,6 +640,18 @@ footer {
 }
 
 /* SCANNER */
+/* .camera-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.new-form__camera__container {
+  position: relative;
+  width: 100%;
+} */
+
 .new-form__camera__video {
   width: 100%;
   background-color: rgb(166, 154, 154);
@@ -816,11 +828,11 @@ select {
   font-size: var(--p-font);
   font-weight: 400;
   cursor: pointer;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .scanner-delete-btn:hover {
-  transform: scale(.98);
+  transform: scale(0.98);
 }
 
 /* CART */
@@ -965,7 +977,7 @@ select {
 }
 
 .cart-details__button:hover {
-  transform: scale(.98);
+  transform: scale(0.98);
 }
 
 /* BIOPORI */
