@@ -67,5 +67,10 @@ export default class App {
         }
       },
     });
+
+    transition.ready.catch(console.error);
+    transition.updateCallbackDone.then(() => {
+      scrollTo({ top: 0, behavior: 'instant' });
+    });
   }
 }
