@@ -4,7 +4,7 @@ export default class BioporePage {
     return `
       <section id="biopori" class="biopori background-section">
         <div class="biopori-container">
-          <h1 class="section-title">Biopore</h1>
+          <h1 class="section-title">Biopori</h1>
           <div id="biopori-header" class="biopori-header"></div>
           <div class="biopori-line"></div>
           <div class="biopori-body">
@@ -34,7 +34,7 @@ export default class BioporePage {
 
               <div class="biopori-details__description">
                 <h3>Deskripsi</h3>
-                <p id="biopori-details__paragraph" class="biopori-details__paragraph"></p>
+                <p id="biopori-details__paragraph" class="biopori-details__paragraph description"></p>
               </div>
 
               <div id="biopori-details__spesification" class="biopori-details__spesification"></div>

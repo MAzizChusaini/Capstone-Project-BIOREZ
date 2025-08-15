@@ -12,12 +12,10 @@ export default class HomePage {
         <div class="home-container">
           <div class="home-description">
             <h1>BIOPORE & <br><span>RECYCLE ZONE</span></h1>
-            <p>
+            <p class="description">
               BIOREZ merupakan sebuah platform berbasis website yang dirancang untuk mendukung gaya hidup ramah lingkungan melalui pengelolaan sampah dan pemanfaatan teknologi biopori.
             </p>
-            <div class="home-btn">
-              <a href="#services" class="button green-button">Explore</a>
-            </div>
+            <a href="#services" class="home-btn button green-button">Jelajahi</a>
           </div>
 
           <div class="home-img">
@@ -29,24 +27,24 @@ export default class HomePage {
       <!-- OUR SERVICES -->
       <section id="services" class="services background-section">
         <div class="service-container">
-          <h1 class="section-title">Our Services</h1>
+          <h1 class="section-title">Layanan Kami</h1>
 
-          <div class="fitur">
-            <div class="list-fitur">
+          <div class="main-services">
+            <div class="services-list">
               <i class="bx bx-scan bx-lg"></i>
-              <h3>Scanner</h3>
+              <h3>Pemindai</h3>
               <p>Klasifikasi sampah organik dan anorganik</p>
             </div>
 
-            <div class="list-fitur">
+            <div class="services-list">
               <i class="bx bx-store bx-lg"></i>
-              <h3>Shop</h3>
+              <h3>Toko</h3>
               <p>Jual beli barang bekas layak pakai</p>
             </div>
 
-            <div class="list-fitur">
+            <div class="services-list">
               <i class="bx bx-leaf bx-lg"></i>
-              <h3>Biopore</h3>
+              <h3>Biopori</h3>
               <p>Menawarkan pembelian, dan pemasangan Biopori</p>
             </div>
           </div>
@@ -62,15 +60,15 @@ export default class HomePage {
 
           <div class="vision-mission-body">
               <div class="vision-mission-content">
-                <h2>Visi</h2>
-                <p class="vision-description">
+                <h3>Visi</h3>
+                <p class="description">
                   Menjadi platform digital terdepan dalam mendorong gaya hidup ramah lingkungan melalui inovasi pemilahan sampah, pemanfaatan limbah, dan pemasyarakatan biopori secara berkelanjutan di Indonesia.
                 </p>
               </div>
 
               <div class="vision-mission-content">
-                <h2>Misi</h2>
-                <p class="mission-description">
+                <h3>Misi</h3>
+                <p class="description">
                   BIOREZ bertujuan untuk meningkatkan kesadaran dan partisipasi masyarakat dalam pengelolaan sampah dan pelestarian lingkungan melalui fitur pemindai sampah, marketplace barang bekas, serta layanan biopori. Melalui edukasi dan kolaborasi komunitas, BIOREZ membangun ekosistem digital yang mendukung gaya hidup ramah lingkungan secara berkelanjutan.
                 </p>
               </div>
@@ -82,11 +80,11 @@ export default class HomePage {
       <!-- SHOP -->
       <section id="shop" class="shop background-section">
         <div class="shop-container">
-          <h1 class="section-title">Our Shop</h1>
+          <h1 class="section-title">Layanan Kami</h1>
 
           <div id="shop-list"></div>
           <div class="shop-item__button">
-            <a href="#/shop" class="button green-button">All Items</a>
+            <a href="#/shop" class="button green-button">Semua Barang</a>
           </div>
           <div id="shop-list-loading-container"></div>
       </section>

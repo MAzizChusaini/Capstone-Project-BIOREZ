@@ -2,7 +2,10 @@ import {
   generateShopItemsTemplate, 
   AddToCartButtonTemplate, 
   successAddToCartButtonTemplate,
-  generateLoaderAbsoluteTemplate
+  generateLoaderAbsoluteTemplate,
+  generateShopListEmptyTemplate,
+  generateShopItemsNotFoundTemplate,
+  generateShopListErrorTemplate,
 } from '../../template';
 import * as BiorezAPI from '../../data/api';
 import ShopPresenter from './shop-presenter';
@@ -17,27 +20,29 @@ export default class ShopPage {
     return `
       <section id="shop" class="shop background-section">
         <div class="shop-container">
-          <h1 class="section-title">Shop</h1>
+          <h1 class="section-title">Toko</h1>
 
-          <div class="search-btn">
-            <input id="search-shop" class="search-shop" type="search" placeholder="Search..." />
-          </div>
-
-          <div class="filter-shop-button-container">
-            <div class="filter-shop-button-list">
-              <button class="filter-shop-button button filter-active">All Items</button>
-              <button class="filter-shop-button button">Pakaian</button>
+          <div id="shop-content-container" class="shop-content-container">
+            <div class="search-input-container">
+              <input id="search-shop" class="search-shop" type="search" placeholder="Cari..." />
             </div>
 
-            <div class="filter-shop-button-list">
-              <button class="filter-shop-button button">Elektronik</button>
-              <button class="filter-shop-button button">Kendaraan</button>
-            </div>
-          </div>
+            <div class="filter-shop-button-container">
+              <div class="filter-shop-button-list">
+                <button class="filter-shop-button button filter-active">Semua</button>
+                <button class="filter-shop-button button">Pakaian</button>
+              </div>
 
-          <div class="shop-list-container">
-            <div id="shop-list"></div>
-            <div id="shop-list-loading-container"></div>
+              <div class="filter-shop-button-list">
+                <button class="filter-shop-button button">Elektronik</button>
+                <button class="filter-shop-button button">Kendaraan</button>
+              </div>
+            </div>
+
+            <div class="shop-list-container">
+              <div id="shop-list"></div>
+              <div id="shop-list-loading-container"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -86,6 +91,11 @@ export default class ShopPage {
   }
 
   populateShopItemsList(message, items) {
+    if (!items || items.length === 0) {
+      this.populateShopListEmpty();
+      return;
+    }
+
     const html = items.reduce((acc, item) => {
       return acc.concat(generateShopItemsTemplate(item));
     }, '');
@@ -149,6 +159,18 @@ export default class ShopPage {
     }
   }
 
+  populateShopListEmpty() {
+    document.getElementById('shop-content-container').innerHTML = generateShopListEmptyTemplate();
+  }
+
+  populateShopItemsNotFound() {
+    document.getElementById('shop-list').innerHTML = generateShopItemsNotFoundTemplate();
+  }
+  
+  populateShopListError() {
+    document.getElementById('shop-content-container').innerHTML = generateShopListErrorTemplate();
+  }
+  
   showLoading() {
     document.getElementById('shop-list-loading-container').innerHTML =
       generateLoaderAbsoluteTemplate();
