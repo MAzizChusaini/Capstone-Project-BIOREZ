@@ -15,9 +15,17 @@ export default class ShopPresenter {
     try {
       const response = await this.#apiModel.getAllShopItems();
       this.#allItems = response.data;
+
+      if (!response.ok) {
+        console.error('initialArticles: response:', response);
+        this.#view.populateShopListError(response.message);
+        return;
+      }
+
       this.#view.populateShopItemsList(response.message, this.#allItems);
     } catch (error) {
       console.error('initialShopItems: error:', error);
+      this.#view.populateShopListError(error.message);
     } finally {
       this.#view.hideLoading();
     }
@@ -32,6 +40,11 @@ export default class ShopPresenter {
 
     if (activeFilter && activeFilter !== 'All Items') {
       filteredItems = filteredItems.filter((item) => item.category && item.category.toLowerCase() === activeFilter);
+    }
+
+    if (filteredItems.length === 0) {
+      this.#view.populateShopItemsNotFound();
+      return;
     }
 
     this.#view.populateShopItemsList('Filtered items', filteredItems);

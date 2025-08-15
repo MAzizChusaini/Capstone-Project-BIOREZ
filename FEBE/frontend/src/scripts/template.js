@@ -83,3 +83,30 @@ export function successAddToCartButtonTemplate() {
     </button>
   `;
 }
+
+export function generateShopListEmptyTemplate() {
+  return `
+    <div id="shop-list-empty" class="shop-list__emptyOrError">
+      <h2>Tidak ada barang yang tersedia</h2>
+      <p class="description">Maaf, saat ini tidak ada barang yang dapat ditampilkan.</p>
+    </div>
+  `;
+}
+
+export function generateShopItemsNotFoundTemplate() {
+  return `
+    <div id="shop-items-not-found" class="shop-list__emptyOrError">
+      <h2>Barang tidak ditemukan</h2>
+    </div>
+  `;
+}
+
+export function generateShopListErrorTemplate(message) {
+  return `
+    <div id="shop-list-error" class="shop-list__emptyOrError">
+      <h2>Terjadi kesalahan pengambilan daftar barang</h2>
+      <p class="description">
+        ${message ? message : "Gunakan jaringan lain atau laporkan error ini."}</p>
+    </div>
+  `;
+}

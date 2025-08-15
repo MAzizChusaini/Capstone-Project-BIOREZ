@@ -254,6 +254,11 @@
   }
 
   /* SHOP */
+  .search-shop {
+    width: 100%;
+    padding: 10px;
+  }
+
   .filter-shop-button {
     padding: 10px 30px;
     font-size: 0.8rem !important;
@@ -312,12 +317,17 @@
   }
 
   /* SHOP */
-  .search-btn .search-shop {
+  .search-shop {
     width: 80%;
+  }
+
+  .filter-shop-button-container {
+    gap: 10px;
   }
 
   .filter-shop-button-list {
     flex-direction: column;
+    gap: 10px;
   }
 
   .shop-item__cart-button i {
