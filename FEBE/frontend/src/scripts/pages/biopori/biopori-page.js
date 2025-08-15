@@ -4,7 +4,7 @@ export default class BioporePage {
     return `
       <section id="biopori" class="biopori background-section">
         <div class="biopori-container">
-          <h1 class="section-title">Biopore</h1>
+          <h1 class="section-title">Biopori</h1>
           <div id="biopori-header" class="biopori-header"></div>
           <div class="biopori-line"></div>
           <div class="biopori-body">

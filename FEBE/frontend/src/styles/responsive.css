@@ -22,7 +22,11 @@
 
   /* NAVIGATION BAR */
   .navigation-container .nav-menu {
-    gap: 30px;
+    gap: 25px;
+  }
+
+  .navigation-container .nav-menu li a {
+    font-size: 1rem;
   }
 
   /* SHOP */
@@ -181,8 +185,13 @@
   }
 
   /* OUR SERVICE */
-  .fitur {
+  .main-services {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .services-list {
+    max-width: none;
   }
 
   /* VISSION & MISSION */
@@ -279,11 +288,11 @@
   }
 
   .navigation-container .contact-us-button {
-    padding: 7px 20px;
+    padding: 7px 15px;
   }
 
   .footer-law {
-    gap: 30px;
+    gap: 15px;
   }
 }
 
@@ -335,11 +344,11 @@
   }
 
   /* OUR SERVICE */
-  .list-fitur h2 {
+  .services-list h2 {
     font-size: var(--h2-font);
   }
 
-  .list-fitur p {
+  .services-list p {
     font-size: var(--p-font);
   }
 
@@ -376,6 +385,16 @@
   .footer-detail {
     flex-direction: column;
     gap: 2rem;
+  }
+
+  .footer-detail-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-detail-text a,
+  .footer-copyright p,
+  .footer-law a {
+    font-size: .9rem;
   }
 
   .footer-copyright {

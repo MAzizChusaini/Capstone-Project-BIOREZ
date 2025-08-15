@@ -26,7 +26,7 @@ export function generateShopItemsTemplate(item, showCartButton = true) {
         <div id="shop-item__cart-button-container" class="shop-item__cart-button-container">
           <button class="shop-item__cart-button button green-button">
             <i class="bx bx-cart"></i>
-            Add to Cart
+            Keranjang
           </button>
         </div>`
             : ''
@@ -70,7 +70,7 @@ export function AddToCartButtonTemplate() {
   return `
     <button class="shop-item__cart-button button">
       <i class="bx bx-cart"></i>
-      Add to Cart
+      Keranjang
     </button>
   `;
 }
@@ -79,7 +79,7 @@ export function successAddToCartButtonTemplate() {
   return `
     <button class="shop-item__cart-button button" disabled>
       <i class='bx bx-check-circle'></i>
-      Success
+      Sukses
     </button>
   `;
 }

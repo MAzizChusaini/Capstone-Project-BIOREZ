@@ -19,16 +19,16 @@ export default class ShopPage {
     return `
       <section id="shop" class="shop background-section">
         <div class="shop-container">
-          <h1 class="section-title">Shop</h1>
+          <h1 class="section-title">Toko</h1>
 
           <div id="shop-content-container" class="shop-content-container">
             <div class="search-input-container">
-              <input id="search-shop" class="search-shop" type="search" placeholder="Search..." />
+              <input id="search-shop" class="search-shop" type="search" placeholder="Cari..." />
             </div>
 
             <div class="filter-shop-button-container">
               <div class="filter-shop-button-list">
-                <button class="filter-shop-button button filter-active">All Items</button>
+                <button class="filter-shop-button button filter-active">Semua</button>
                 <button class="filter-shop-button button">Pakaian</button>
               </div>
 
