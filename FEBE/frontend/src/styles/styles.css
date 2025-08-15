@@ -922,15 +922,16 @@ select {
 .cart-item-description {
   font-size: var(--p-font);
   color: var(--text-color);
-  margin: 5px 0 50px;
+  margin: 5px 0 20px;
+  /* margin: 5px 0 50px; */
 }
 
 .cart-item__price {
-  width: 100%;
+  /* width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
-  margin-bottom: 20px;
+  margin-bottom: 20px; */
   color: var(--main-color);
 }
 

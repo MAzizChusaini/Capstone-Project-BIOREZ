@@ -17,7 +17,7 @@ export default class ShopPresenter {
       this.#allItems = response.data;
 
       if (!response.ok) {
-        console.error('initialArticles: response:', response);
+        console.error('initialShopItems: response:', response);
         this.#view.populateShopListError(response.message);
         return;
       }

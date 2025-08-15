@@ -80,7 +80,7 @@ export default class ShopPage {
         button.classList.add('filter-active');
 
         const filterText = button.textContent.trim().toLowerCase();
-        this.activeFilter = filterText === 'all items' ? null : filterText;
+        this.activeFilter = filterText === 'semua' ? null : filterText;
 
         const searchTerm = searchInput.value.trim().toLowerCase();
         this.#presenter.filterItems(searchTerm, this.activeFilter);
@@ -160,7 +160,8 @@ export default class ShopPage {
   }
 
   populateShopListEmpty() {
-    document.getElementById('shop-content-container').innerHTML = generateShopListEmptyTemplate();
+    this.hideLoading();
+    document.getElementById('shop-list').innerHTML = generateShopListEmptyTemplate();
   }
 
   populateShopItemsNotFound() {
@@ -168,7 +169,7 @@ export default class ShopPage {
   }
   
   populateShopListError() {
-    document.getElementById('shop-content-container').innerHTML = generateShopListErrorTemplate();
+    document.getElementById('shop-list').innerHTML = generateShopListErrorTemplate();
   }
   
   showLoading() {

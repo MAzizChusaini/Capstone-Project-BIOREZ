@@ -1,4 +1,9 @@
-import { generateShopItemsTemplate, generateLoaderAbsoluteTemplate } from '../../template';
+import { 
+  generateShopItemsTemplate, 
+  generateShopListEmptyTemplate,
+  generateShopListErrorTemplate,
+  generateLoaderAbsoluteTemplate,
+} from '../../template';
 import * as BiorezAPI from '../../data/api';
 import HomePresenter from './home-presenter';
 
@@ -80,13 +85,16 @@ export default class HomePage {
       <!-- SHOP -->
       <section id="shop" class="shop background-section">
         <div class="shop-container">
-          <h1 class="section-title">Layanan Kami</h1>
+          <h1 class="section-title">Toko Kami</h1>
 
-          <div id="shop-list"></div>
-          <div class="shop-item__button">
-            <a href="#/shop" class="button green-button">Semua Barang</a>
+          <div id="shop-content-container" class="shop-content-container">
+            <div id="shop-list"></div>
+            <div class="shop-item__button">
+              <a href="#/shop" class="button green-button">Semua Barang</a>
+            </div>
+            <div id="shop-list-loading-container"></div>
           </div>
-          <div id="shop-list-loading-container"></div>
+        </div>
       </section>
     `;
   }
@@ -103,6 +111,11 @@ export default class HomePage {
   populateShopItemsList(message, items) {
     const limitedItems = items.slice(0, 6);
 
+    if (!items || items.length === 0) {
+      this.populateShopListEmpty();
+      return;
+    }
+
     const html = limitedItems.reduce((acc, item) => {
       return acc.concat(generateShopItemsTemplate(item, false));
     }, '');
@@ -112,11 +125,22 @@ export default class HomePage {
       `;
   }
 
+  populateShopListEmpty() {
+    document.getElementById('shop-content-container').innerHTML = generateShopListEmptyTemplate();
+  }
+
+  populateShopListError() {
+    document.getElementById('shop-list').innerHTML = generateShopListErrorTemplate();
+  }
+
   showLoading() {
     document.getElementById('shop-list-loading-container').innerHTML = generateLoaderAbsoluteTemplate();
   }
 
   hideLoading() {
-    document.getElementById('shop-list-loading-container').innerHTML = '';
+    const loaderEl = document.getElementById('shop-list-loading-container');
+    if (loaderEl) {
+      loaderEl.innerHTML = '';
+    }
   }
 }
