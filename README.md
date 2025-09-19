@@ -42,7 +42,9 @@ CAPSTONEFINAL/
 ├── README.md
 └── requirements.txt
 ```
+
 ---
+
 ## 🛠️ Teknologi yang Digunakan
 ### Frontend
 - JavaScript
@@ -61,14 +63,28 @@ CAPSTONEFINAL/
 
 ---
 
-## 📦 Instalasi
-```
-pip install -r requirements.txt
-npm install
-npm install onnxruntime-web
-npm run start
-```
+## 🚀 Instalasi dan Menjalankan Aplikasi
+
+1. **Clone Repository**
+   ```bash
+   git clone https://github.com/MFadhliAlHafizh/kkp-project.git
+   cd kkp-project
+
+2. **Install Dependency Proyek**
+   Pastikan Anda sudah menginstall Node.js.
+   ```bash
+   npm install
+
+3. **Jalankan Frontend & Backend Bersamaan (Development)**
+   ```bash
+   npm run start-dev
+
+4. **Jalankan Frontend Untuk Produksi (Production)**
+   ```bash
+   npm run build
+   
 ---
+
 ## 📁 Dataset
 https://www.kaggle.com/datasets/techsash/waste-classification-data
 
