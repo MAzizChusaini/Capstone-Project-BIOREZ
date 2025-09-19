@@ -67,8 +67,8 @@ CAPSTONEFINAL/
 
 1. **Clone Repository**
    ```bash
-   git clone https://github.com/MFadhliAlHafizh/kkp-project.git
-   cd kkp-project
+   git clone https://github.com/MAzizChusaini/Capstone-Project-BIOREZ.git
+   cd Capstone-Project-BIOREZ
 
 2. **Install Dependency Proyek**
    Pastikan Anda sudah menginstall Node.js.
