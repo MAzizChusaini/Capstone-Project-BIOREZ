@@ -1,8 +1,8 @@
-# 🌱 BioRez – Sustainable Environment Web App
+# 🌱 BIOREZ – Sustainable Environment Web App
 
 ## 🧭 Deskripsi Proyek
 
-**BioRez** adalah aplikasi berbasis web yang mendukung keberlanjutan lingkungan, terinspirasi oleh filosofi Jepang *Mottainai* — rasa sayang membuang sesuatu yang masih bernilai.
+**BIOREZ** adalah aplikasi berbasis web yang mendukung keberlanjutan lingkungan, terinspirasi oleh filosofi Jepang *Mottainai* — rasa sayang membuang sesuatu yang masih bernilai.
 
 Di Indonesia, sistem pemilahan sampah masih belum berjalan secara optimal. Banyak masyarakat yang belum teredukasi mengenai pentingnya memilah sampah, dan meskipun sudah ada edukasi, kenyataannya di Tempat Pembuangan Akhir (TPA) sampah sering kali kembali disatukan.
 
@@ -18,57 +18,88 @@ Aplikasi ini menyediakan fitur **scan sampah** menggunakan **machine learning im
 
 ## 🖼️ Fitur Utama
 
-- 🌳 Edukasi pemilahan sampah
-- 📷 Deteksi sampah organik/anorganik dengan kamera & AI
+- 🏠 Beranda informatif
+- 📷 Pemindai sampah organik/anorganik dengan kamera atau upload gambar berbasis Machine Learning
 - 🛒 Fitur toko untuk jual beli barang layak pakai
-- 📱 Dapat diakses di desktop & mobile (responsive)
+- 🎯 Antarmuka sederhana dan berbahasa Indonesia, mudah digunakan oleh siapa saja 
+- 📱 Responsif dan dapat diakses di desktop maupun mobile
+   
+---
+
+## 🏗️ Struktur Folder Penting
+```
+KKP-PROJECT
+├── FEBE
+│   ├── backend
+│   │   └── src
+│   │       ├── article.js
+│   │       ├── handler.js
+│   │       ├── routes.js
+│   │       └── server.js
+│   │
+│   └── frontend
+│       └── src
+│           ├── scripts
+│           │   ├── data/
+│           │   ├── pages/
+│           │   ├── routes/
+│           │   ├── utils/
+│           │   ├── config.js
+│           │   ├── index.js
+│           │   └── template.js
+│           │
+│           ├── styles/
+│           └── index.html
+│
+├── ML
+│   ├── dataset/
+│   ├── models/
+│   ├── notebook/
+│   └── src/
+│
+├── public
+│   ├── images/
+│   └── models/
+│
+├── package.json
+├── webpack-common.js
+├── webpack-dev.js
+└── webpack-prod.js
+```
 
 ---
 
-## 🏗️ Struktur Folder
-```
-CAPSTONEFINAL/
-├── frontend/
-│ └── src/
-│ ├── pages/
-│ ├── routes/
-│ ├── utils/
-│ └── styles/
-├── ML/
-│ ├── dataset/
-│ ├── models/
-│ └── notebook/
-├── public/
-├── README.md
-└── requirements.txt
-```
----
 ## 🛠️ Teknologi yang Digunakan
-### Frontend
-- JavaScript
-- Webpack
-- HTML, CSS
 
-### Backend
-- Node.js
-- Hapi.js
-- Postman
-
-### Machine Learning
-- TensorFlow
-- Python
-- Jupyter Notebook
+- **Frontend:** HTML, CSS, JavaScript, Webpack
+- **Backend:** Node.js, Hapi.js, Postman
+- **Machine Learning:** TensorFlow, Python, Jupyter Notebook
+- **Lainnya:** RESTful API, Local Storage, IndexedDB API, View Transition API
 
 ---
 
-## 📦 Instalasi
-```
-pip install -r requirements.txt
-npm install
-npm install onnxruntime-web
-npm run start
-```
+## 🚀 Instalasi dan Menjalankan Aplikasi
+
+1. **Clone Repository**
+   ```bash
+   git clone https://github.com/MAzizChusaini/Capstone-Project-BIOREZ.git
+   cd Capstone-Project-BIOREZ
+
+2. **Install Dependency Proyek**
+   Pastikan Anda sudah menginstall Node.js.
+   ```bash
+   npm install
+
+3. **Jalankan Frontend & Backend Bersamaan (Development)**
+   ```bash
+   npm run start-dev
+
+4. **Jalankan Frontend Untuk Produksi (Production)**
+   ```bash
+   npm run build
+   
 ---
+
 ## 📁 Dataset
 https://www.kaggle.com/datasets/techsash/waste-classification-data
 
