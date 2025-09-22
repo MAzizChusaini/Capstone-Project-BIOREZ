@@ -128,7 +128,7 @@ export default class Scanner {
                 <div class="new-form__documentations__buttons">
                   <div class="camera-btn-container">
                     <div class="documentations-buttons-container">
-                      <button id="documentations-input-button" class="button white-button" type="button">Upload Gambar</button>
+                      <button id="documentations-input-button" class="button white-button" type="button">Unggah Gambar</button>
                       <input id="documentations-input" class="new-form__documentations__input" name="documentations" type="file" accept="image/*" multiple />
                       <button id="open-documentations-camera-button" class="button white-button" type="button">Buka Kamera</button>
                     </div>
